@@ -4,7 +4,7 @@ export default function About() {
     return (
         <div>
             <Navbar/>
-            <div className={styles.description}>
+            <div className={description}>
                 <h1>Hi I'm Charles</h1>
                 <h3>Aspiring Dev who loves the functional side of the development process.</h3>
                 <div>
