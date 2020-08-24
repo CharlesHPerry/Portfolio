@@ -1,10 +1,11 @@
 import Navbar from '../components/navbar'
+import styles from '../styles/Home.module.css'
 
 export default function About() {
     return (
         <div>
             <Navbar/>
-            <div className={description}>
+            <div className={styles.description}>
                 <h1>Hi I'm Charles</h1>
                 <h3>Aspiring Dev who loves the functional side of the development process.</h3>
                 <div>
