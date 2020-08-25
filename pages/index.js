@@ -9,9 +9,8 @@ export default function Home() {
         <title>Charles H. Perry</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Navbar/>
       <main className={styles.main}>
-        <Navbar/>
         <h1 className={styles.title}>
           Charles Perry
         </h1>
@@ -45,7 +44,7 @@ export default function Home() {
           >
             <h3>Coming Soon! &rarr;</h3>
             <p>
-              I will soon be creating a new project with a new set of technologies, stay tooned!
+              I will soon be creating a new project with a new set of technologies, stay tuned!
             </p>
           </a>
         </div>
