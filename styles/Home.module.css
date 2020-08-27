@@ -116,6 +116,19 @@
   height: 1em;
 }
 
+.techicons {
+  display: flex;
+  justify-content: space-between;
+}
+.icons {
+  width: 5em;
+  flex-wrap: wrap;
+}
+.galpic {
+  width: 860px;
+  height: 565px;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
