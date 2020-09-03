@@ -128,6 +128,14 @@
   width: 860px;
   height: 565px;
 }
+.cartext {
+  display: flex;
+  color: black;
+  z-index: 3;
+}
+.carcap {
+  padding-bottom: 15vh;
+}
 
 @media (max-width: 600px) {
   .grid {
