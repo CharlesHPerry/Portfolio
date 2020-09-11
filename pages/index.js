@@ -17,7 +17,7 @@ const DynamicComponent = dynamic(() => import('../components/carouseltext'))
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
   const [text, setText] = useState("Other than a Tic Tac Toe game, this was my first attempt at making a game using Javascript, CSS and HTML. Deployed and playable, but currently a work in progress. This game is meant to be a challenging platformer that puts emphasis on the player having good timing and knowledge of game mechanics.");
-
+  //The carouseltext component is not being updated properly so I need to do this as a dirty fix.
   const textSelect = () => {
     if (index === 3) {
       setText("Other than a Tic Tac Toe game, this was my first attempt at making a game using Javascript, CSS and HTML. Deployed and playable, but currently a work in progress. This game is meant to be a challenging platformer that puts emphasis on the player having good timing and knowledge of game mechanics.")
@@ -34,7 +34,7 @@ function ControlledCarousel() {
 
   return (
     <div className={styles.main}>
-      <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel activeIndex={index} onSelect={handleSelect} indicators={false} controls={false} pause={'hover'} interval={8000}>
         <Carousel.Item className={styles.galpic}>
           <img
             className="d-block w-80"

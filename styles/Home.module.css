@@ -55,7 +55,7 @@
 .title,
 .description {
   text-align: center;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .description {
@@ -116,12 +116,17 @@
   height: 1em;
 }
 
+.navlogo {
+  height: 3em;
+}
+
 .techicons {
-  display: flex;
+  display: inline-block;
   justify-content: space-between;
+
 }
 .icons {
-  width: 5em;
+  width: 3em;
   flex-wrap: wrap;
 }
 .galpic {
@@ -129,13 +134,15 @@
   height: 565px;
 }
 .cartext {
+  padding-top: 3rem;
   display: flex;
   color: black;
-  z-index: 3;
+  justify-content: center;
+  width: 70%;
+  text-align: center;
+  font-size: 18px;
 }
-.carcap {
-  padding-bottom: 15vh;
-}
+
 
 @media (max-width: 600px) {
   .grid {

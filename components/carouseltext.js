@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css'
 
 export default function CarouselText(props) {
     return (
-        <div>
+        <div className={styles.cartext }>
             <p>{props.text}</p>
         </div>
     )
