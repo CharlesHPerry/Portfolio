@@ -143,6 +143,11 @@
   font-size: 18px;
 }
 
+.tar {
+  position: absolute;
+  text-align: right;
+  
+}
 
 @media (max-width: 600px) {
   .grid {
