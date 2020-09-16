@@ -5,9 +5,7 @@ import Head from 'next/head'
 export default function About() {
     return (
         <div>
-            <Head>
-
-            </Head>
+            <Head></Head>
             <Header/>
             <main className={styles.main}>
                 <div className={styles.description}>
@@ -56,10 +54,18 @@ export default function About() {
                     </div>
                     <div className={styles.center}>
                         <h2>Hobbies and Interests</h2>
-                        <p className={styles.li}>I have played a wide variety of sports in my life, the first being tennis. My mother put a racket in my hand before I can remember and I still play to this day, but in the last two years I have joined the hype train for Pickleball and tennis has taken a back seat.</p>
-                        <p className={styles.ri}>I also played baseball for many years, even joining a select team at one point during highschool, however the tennis season conflicted with baseball's season and I decided to stay true with the sport I had played longer.</p>
-                        <p className={styles.li}>The sport that I played for the second longest amount of time and my second favorite is basketball. I was never amazing, but the team building aspect and the fact that as a highschool player I had the opportunity to volunteer as a coach for a youth basketball camp that our school hosted for children in grades kindergarten through eighth grade.</p>
-                        <p className={styles.ri}>Aside from sports I have always loved building things and or working with my hands. My favorite toys as a child (and to this day) were Legos, and after my fingers were sore from legos I would play with a block of never dry clay that my father bought me. My inclination towards working with my hands/ creating things stuck with me as I grew up and I was lucky enough to be able to take both ceramics and woodshop multiple times during highschool.</p>
+                        <div>
+                            <p className={styles.li}>I have played a wide variety of sports in my life, the first being tennis. My mother put a racket in my hand before I can remember and I still play to this day, but in the last two years I have joined the hype train for Pickleball and tennis has taken a back seat.</p>
+                        </div>
+                        <div>
+                            <p className={styles.ri}>I also played baseball for many years, even joining a select team at one point during highschool, however the tennis season conflicted with baseball's season and I decided to stay true with the sport I had played longer and enjoyed more.</p>
+                        </div>
+                        <div>
+                            <p className={styles.li}>The sport that I played for the second longest amount of time and my second favorite is basketball. I was never amazing, but the team building aspect and the fact that as a highschool player I had the opportunity to volunteer as a coach for a youth basketball camp that our school hosted for children in grades kindergarten through eighth grade.</p>
+                        </div>
+                        <div>
+                            <p className={styles.ri}>Aside from sports I have always loved building things and or working with my hands. My favorite toys as a child (and to this day) were Legos, and after my fingers were sore from legos I would play with a block of never dry clay that my father bought me. My inclination towards working with my hands/ creating things stuck with me as I grew up and I was lucky enough to be able to take both ceramics and woodshop multiple times during highschool.</p>
+                        </div>
                         <div className={styles.li}>
                             <p>While software development may not be something I can physically manipulate. The sense of accomplishment, catharsis, and joy I feel when I work my way through debugging a tough issue keeps me coming back for more with a greater sense motivation to solve the next bug.</p>
                         </div>
