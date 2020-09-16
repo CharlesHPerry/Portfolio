@@ -148,6 +148,31 @@
   text-align: right;
   
 }
+.bigblurb {
+  text-align: center;
+  margin-top: 3vh;
+  width: 80%;
+  font-size: 1.2rem;
+}
+.ri {
+  padding-top: 3vh;
+  text-align: center;
+  margin-left: 30vw;
+  width: 66%;
+}
+
+.li {
+  padding-top: 3vh;
+  text-align: center;
+  margin-right: 30px;
+  width: 66%; 
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+  width: 80%;
+}
 
 @media (max-width: 600px) {
   .grid {
