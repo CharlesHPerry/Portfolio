@@ -89,7 +89,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Charles H. Perry</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/hgh2.png" />
       </Head>
       <Header/>
       <main className={styles.main}>
@@ -105,12 +105,12 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          My resume {' '}
+          <img src="/hgh2.png" alt="My Logo" className={styles.logo} />
         </a>
       </footer>
     </div>
