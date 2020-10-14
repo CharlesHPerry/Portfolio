@@ -4,7 +4,7 @@ import Header from '../components/header'
 import Carousel from 'react-bootstrap/Carousel'
 import { useState, useEffect, useRef } from 'react'
 import dynamic from 'next/dynamic'
-import { TweenMax, Power3 } from 'gsap'
+import { gsap, TweenMax, Power3 } from 'gsap'
 
 
 let carouselText = [
