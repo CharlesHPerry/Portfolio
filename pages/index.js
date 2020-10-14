@@ -2,8 +2,10 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Header from '../components/header'
 import Carousel from 'react-bootstrap/Carousel'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import dynamic from 'next/dynamic'
+import { TweenMax, Power3 } from 'gsap'
+
 
 let carouselText = [
   "Other than a Tic Tac Toe game, this was my first attempt at making a game using Javascript, CSS and HTML. Deployed and playable, but currently a work in progress. This game is meant to be a challenging platformer that puts emphasis on the player having good timing and knowledge of game mechanics.",
@@ -34,7 +36,7 @@ function ControlledCarousel() {
 
   return (
     <div className={styles.main}>
-      <Carousel activeIndex={index} onSelect={handleSelect} indicators={false} controls={false} pause={'hover'} interval={8000}>
+      <Carousel activeIndex={index} onSelect={handleSelect} indicators={false} controls={false} pause={'hover'} interval={4000}>
         <Carousel.Item className={styles.galpic}>
           <img
             className="d-block w-80"
@@ -85,6 +87,27 @@ function ControlledCarousel() {
 
 
 export default function Home() {
+
+  let introName = useRef(null);
+  let introText = useRef(null);
+  
+  useEffect(() => {
+    TweenMax.to(
+    introName,
+    1, {
+      y: +20,
+      opacity: 1,
+    })
+    TweenMax.to(
+      introText,
+      1, {
+        y: +20,
+        opacity: 1,
+        delay: .4,
+      }
+    )
+  }, [])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -93,12 +116,12 @@ export default function Home() {
       </Head>
       <Header/>
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <h1 className={styles.title, styles.fade} ref={el => {introName = el}}>
           Charles Perry
         </h1>
 
-        <p className={styles.description}>
-          Up and Coming Full Stack Dev out of the Seattle Area. Graduate of General Assembly's Software Engineering Immersive Remote class. Below are some of my in progress projects:
+        <p className={styles.fade_description} ref={el => {introText = el}}>
+          Up and coming Full Stack Dev out of the Seattle area. Graduate of General Assembly's remote Software Engineering Immersive program. Below are some of my in-progress projects:
         </p>
         <ControlledCarousel />
       </main>
