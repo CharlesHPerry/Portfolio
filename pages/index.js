@@ -113,10 +113,11 @@ export default function Home() {
       <Head>
         <title>Charles H. Perry</title>
         <link rel="icon" href="/hgh2.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet"></link>
       </Head>
       <Header/>
       <main className={styles.main}>
-        <h1 className={styles.title, styles.fade} ref={el => {introName = el}}>
+        <h1 className={styles.fade_title} ref={el => {introName = el}}>
           Charles Perry
         </h1>
 
