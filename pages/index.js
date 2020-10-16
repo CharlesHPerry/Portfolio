@@ -4,7 +4,8 @@ import Header from '../components/header'
 import Carousel from 'react-bootstrap/Carousel'
 import { useState, useEffect, useRef } from 'react'
 import dynamic from 'next/dynamic'
-import { TweenMax, Power3} from 'gsap/index'
+import { gsap, TweenMax, Power3} from 'gsap/index'
+import { useIntersection } from 'react-use'
 
 
 let carouselText = [
@@ -88,6 +89,7 @@ function ControlledCarousel() {
 
 export default function Home() {
 
+  let sectionRef = useRef(null);
   let introName = useRef(null);
   let introText = useRef(null);
   
@@ -108,6 +110,36 @@ export default function Home() {
     )
   }, [])
 
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.9,
+  });
+
+  const fadeIn = (element) => {
+    gsap.to(sectionRef.current, 1, {
+      opacity: 1,
+      y: +20,
+      ease: 'power4.out',
+      stagger: {
+        amount: .3,
+      }
+    })
+  };
+
+  const fadeOut = (element) => {
+    gsap.to(sectionRef.current, 1, {
+      opacity: 0,
+      y: -20,
+      ease: 'power4.out',
+      stagger: {
+        amount: .3,
+      }
+    })
+  };
+
+  intersection && intersection.intersectionRatio < 0.95 ? fadeOut(introName) : fadeIn(introName);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -117,13 +149,15 @@ export default function Home() {
       </Head>
       <Header/>
       <main className={styles.main}>
-        <h1 className={styles.fade_title} ref={el => {introName = el}}>
-          Charles Perry
-        </h1>
+        <div ref={sectionRef}>
+          <h1 className={styles.fade_title} ref={el => {introName = el}}>
+            Charles Perry
+          </h1>
 
-        <p className={styles.fade_description} ref={el => {introText = el}}>
-          Up and coming Full Stack Dev out of the Seattle area. Graduate of General Assembly's remote Software Engineering Immersive program. Below are some of my in-progress projects:
-        </p>
+          <p className={styles.fade_description} ref={el => {introText = el}}>
+            Up and coming Full Stack Dev out of the Seattle area. Graduate of General Assembly's remote Software Engineering Immersive program. Below are some of my in-progress projects:
+          </p>
+        </div>
         <ControlledCarousel />
       </main>
 
