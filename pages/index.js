@@ -119,7 +119,7 @@ export default function Home() {
   const fadeIn = (element) => {
     gsap.to(sectionRef.current, 1, {
       opacity: 1,
-      y: +20,
+      y: 20,
       ease: 'power4.out',
       stagger: {
         amount: .3,
