@@ -18,7 +18,7 @@ export default function About() {
     const blurbIntersection = useIntersection(iconRef, {
         root: null,
         rootMargin: "0px",
-        threshold: 0.9,
+        threshold: 1,
     });
 
     let scroll_value = "180px";
@@ -70,7 +70,7 @@ export default function About() {
             </Head>
             <Header/>
             <main>
-                <div>
+                <div className={styles.page_top}>
                     <h2 className={styles.hi}>Hi,</h2>
                     <h1 className={styles.big_text}>I'm Charles.</h1>
                     <h3 className={styles.med_text}>A young dev who loves the functional side of the development process.</h3>

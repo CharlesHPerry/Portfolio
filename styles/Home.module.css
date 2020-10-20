@@ -219,8 +219,9 @@
 
 .hi {
   padding-left: 1vw;
+  padding-top: 5vh;
   font-size: 10vh;
-  margin-top: 15vh;
+  margin-top: 10vh;
   margin-bottom: 0px;
 }
 
@@ -233,6 +234,12 @@
 .big_text {
   padding-left: 1vw;
   font-size: 25vh;
+}
+
+.page_top {
+  background-color: black;
+  color: white;
+  padding-bottom: 5vh;
 }
 
 @media (max-width: 600px) {
