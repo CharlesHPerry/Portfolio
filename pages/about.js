@@ -1,20 +1,85 @@
 import Header from '../components/header'
 import styles from '../styles/Home.module.css'
 import Head from 'next/head'
+import { gsap, TweenMax, Power3} from 'gsap/index'
+import { useIntersection } from 'react-use'
+import { useState, useEffect, useRef } from 'react'
 
 export default function About() {
+    let iconRef = useRef(null);
+    let bigTextRef = useRef(null);
+
+    const iconIntersection = useIntersection(iconRef, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.9,
+    });
+
+    const blurbIntersection = useIntersection(iconRef, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1,
+    });
+
+    let scroll_value = "180px";
+
+    const fadeIn = () => {
+        gsap.to(bigTextRef.current, 2, {
+            opacity: 1,
+            y: +20,
+            ease: 'power4.out',
+        })
+    };
+
+    const fadeOut = () => {
+        gsap.to(bigTextRef.current, 1, {
+            opacity: 0,
+            y: -20,
+            ease: 'power4.out',
+        })
+    }
+
+    const rollIn = () => {
+        gsap.from(iconRef.current, 3, {
+            x: scroll_value,
+            ease: 'power3.out',
+            stagger: {
+                ammount: .3,
+            }
+        })
+    };
+
+    const rollOut = () => {
+        gsap.to(iconRef.current, 3, {
+            x: -scroll_value,
+            ease: 'power3.out',
+            stagger: {
+                amount: .3,
+            }
+        })
+    }
+
+    iconIntersection && iconIntersection.intersectionRatio < .9 ? rollIn(iconRef) : rollOut(iconRef);
+    blurbIntersection && blurbIntersection.intersectionRatio < .9 ? fadeOut(bigTextRef) : fadeIn(bigTextRef);
+
     return (
         <div>
-            <Head></Head>
+            <Head>
+                <title>Charles H. Perry</title>
+                <link rel="icon" href="/hgh2.png" />
+            </Head>
             <Header/>
-            <main className={styles.main}>
-                <div className={styles.description}>
-                    <h1>Hi I'm Charles</h1>
-                    <h3>Young dev who loves the functional side of the development process.</h3>
-                    <div>
+            <main>
+                <div className={styles.page_top}>
+                    <h2 className={styles.hi}>Hi,</h2>
+                    <h1 className={styles.big_text}>I'm Charles.</h1>
+                    <h3 className={styles.med_text}>A young dev who loves the functional side of the development process.</h3>
+                </div>
+                <div className={styles.main}>
+                    <div className={styles.description}>
                         <p>Technologies I've used:</p>
-                        <div className={styles.techicons}>
-                                <svg viewBox="0 0 128 128" className={styles.icons}>
+                        <div className={styles.techicons} ref={iconRef}>
+                                <svg viewBox="0 0 128 128" className={styles.icons} >
                                     <path fill="#E44D26" d="M9.032 2l10.005 112.093 44.896 12.401 45.02-12.387 10.015-112.107h-109.936zm89.126 26.539l-.627 7.172-.276 3.289h-52.665000000000006l1.257 14h50.156000000000006l-.336 3.471-3.233 36.119-.238 2.27-28.196 7.749v.002l-.034.018-28.177-7.423-1.913-21.206h13.815000000000001l.979 10.919 15.287 4.081h.043v-.546l15.355-3.875 1.604-17.579h-47.698l-3.383-38.117-.329-3.883h68.939l-.33 3.539z"></path>
                                 </svg>
                                 <svg viewBox="0 0 128 128" className={styles.icons}>
@@ -48,9 +113,8 @@ export default function About() {
                                 </svg>
                             </div>
                         </div>
-                    </div>
-                    <div className={styles.bigblurb}>
-                        <p>My interest in learning software development began a little over a year ago after I had graduated from West Seattle High School and started some courses at South Seattle college, I found myself displeased with the quality of education that I had been subjected to during my time in the public school system. Things were not much better at the local college. I originally was thinking that I would go to college for a chemical engineering major, as I had found a passion for the subject during my two years of high school chemistry classes. However, my growing disdain for the education system that I had spent the majority of my life in left me feeling that I would be unable to continue on the path that I was on. After a while of working at both the West Seattle Golf Course and a nearby dry cleaners I knew I wanted better for myself so that I would have the financial freedom of not making minimum wage. A few months before COVID-19 started to spread the globe I started to teach myself Python through documentation and Youtube tutorials. As Seattle started going into lockdown I devoted myself to learning this extraordinarily valuable and versatile life skill and decided to take a risk and enroll in a full time immersive course to learn from professionals and work with like minded people. A risk I am so glad I took as I met some of the most genuine and wonderful people during my time at GA. Now that I have graduated I cannot wait for the next chapter in my life where I will get to learn more about the field of software engineering and hone my skills as developer.</p>
+                    <div className={styles.bigblurb} ref={bigTextRef}>
+                        <p>My interest in learning software development began a little over a year ago after I had graduated from West Seattle High School and started some courses at South Seattle college, I found myself displeased with the quality of education that I had been subjected to during my time in the public school system. Things were not much better at the local college. I originally was thinking that I would attend college for a chemical engineering degree, as I had found a passion for the subject during my two years of high school chemistry classes. However, my growing disdain for the education system that I had spent the majority of my life in left me feeling that I would be unable to continue on the path that I was on. After a while of working at both the West Seattle Golf Course and a nearby dry cleaners I knew I wanted to better myself. As a result of encouragement from loved ones, a hunger to continue my education, and a newly found curiosity of how web applications worked; I started to self-study Python through documentation and Youtube tutorials. As Seattle started going into lockdown due to COVID-19, I devoted myself to learning the extraordinarily valuable and versatile skill of software development, and decided to take a risk and enroll in a full time immersive course to learn from professionals and work alongside like-minded individuals. A risk I am so glad I took as I met some of the most genuine and wonderful people during my time at GA. Now that I have graduated, I cannot wait for the next chapter in my life where I will get to learn more about the field of software engineering and hone my skills as developer.</p>
                     </div>
                     <div className={styles.center}>
                         <h2>Hobbies and Interests</h2>
@@ -70,6 +134,7 @@ export default function About() {
                             <p>While software development may not be something I can physically manipulate. The sense of accomplishment, catharsis, and joy I feel when I work my way through debugging a tough issue keeps me coming back for more with a greater sense motivation to solve the next bug.</p>
                         </div>
                     </div>
+                </div>
             </main>
         </div>
     )
