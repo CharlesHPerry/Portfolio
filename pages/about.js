@@ -67,6 +67,7 @@ export default function About() {
             <Head>
                 <title>Charles H. Perry</title>
                 <link rel="icon" href="/hgh2.png" />
+                <meta name="viewport" content="width=device-width, initail-scale=1"></meta>
             </Head>
             <Header/>
             <main>
@@ -74,6 +75,12 @@ export default function About() {
                     <h2 className={styles.hi}>Hi,</h2>
                     <h1 className={styles.big_text}>I'm Charles.</h1>
                     <h3 className={styles.med_text}>A young dev who loves the functional side of the development process.</h3>
+                </div>
+                <div className={styles.my_pic}>
+                    <img src={"/MeandS.jpg"} alt={"the two girls I love most"}/>
+                </div>
+                <div className={styles.pic_text}>
+                    <p>^ The two most important girls in my life, my younger sister Maya, and my wonderful girlfriend Sofia❤️</p>
                 </div>
                 <div className={styles.main}>
                     <div className={styles.description}>
