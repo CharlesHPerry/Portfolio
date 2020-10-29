@@ -17,16 +17,17 @@ export default function About() {
 
     const blurbIntersection = useIntersection(iconRef, {
         root: null,
-        rootMargin: "0px",
-        threshold: 1,
+        rootMargin: "80%",
+        threshold: .9,
     });
 
-    let scroll_value = "180px";
+    let roll_value = "10vw";
+    let scroll_value = "3vh";
 
     const fadeIn = () => {
         gsap.to(bigTextRef.current, 2, {
             opacity: 1,
-            y: +20,
+            y: scroll_value,
             ease: 'power4.out',
         })
     };
@@ -34,14 +35,14 @@ export default function About() {
     const fadeOut = () => {
         gsap.to(bigTextRef.current, 1, {
             opacity: 0,
-            y: -20,
+            y: -scroll_value,
             ease: 'power4.out',
         })
     }
 
     const rollIn = () => {
         gsap.from(iconRef.current, 3, {
-            x: scroll_value,
+            x: roll_value,
             ease: 'power3.out',
             stagger: {
                 ammount: .3,
@@ -51,7 +52,7 @@ export default function About() {
 
     const rollOut = () => {
         gsap.to(iconRef.current, 3, {
-            x: -scroll_value,
+            x: -roll_value,
             ease: 'power3.out',
             stagger: {
                 amount: .3,
@@ -69,15 +70,15 @@ export default function About() {
                 <link rel="icon" href="/hgh2.png" />
                 <meta name="viewport" content="width=device-width, initail-scale=1"></meta>
             </Head>
-            <Header/>
-            <main>
+            <Header />
+            <main className={styles.about_main}>
                 <div className={styles.page_top}>
                     <h2 className={styles.hi}>Hi,</h2>
                     <h1 className={styles.big_text}>I'm Charles.</h1>
                     <h3 className={styles.med_text}>A young dev who loves the functional side of the development process.</h3>
                 </div>
                 <div className={styles.my_pic}>
-                    <img src={"/MeandS.jpg"} alt={"the two girls I love most"}/>
+                    <img src={"/MeandS.jpg"} alt={"the two girls I love most"} className={styles.pic}/>
                 </div>
                 <div className={styles.pic_text}>
                     <p>^ The two most important girls in my life, my younger sister Maya, and my wonderful girlfriend Sofia❤️</p>

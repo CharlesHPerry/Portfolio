@@ -1,3 +1,127 @@
+
+.page_top {
+  background-color: black;
+  width: 100vw;
+  padding-top: 10vh;
+  display: inline-block
+}
+.hi {
+  color: white;
+  width: 100vw;
+  font-size: 5vh;
+}
+.big_text {
+  color: white;
+  font-size: 7vh;
+}
+
+.med_text {
+  width: 100vw;
+  color: white;
+  font-size: 3vh;
+  display: inline-block;
+}
+.about_main {
+  color: white;
+  width: 100vw;
+  position: absolute;
+  justify-content: center;
+  overflow-x: hidden;
+  background-image: linear-gradient(45deg, #282828 0%, black 100%);
+}
+
+.techicons {
+  justify-content: space-between;
+  display: inline-block;
+  width: 90%;
+}
+
+.description{
+  text-align: center;
+}
+
+.icons {
+  width: 10vw;
+  background-color: dimgrey;
+  border-radius: 1em;
+}
+.my_pic {
+  width: 100vw;
+  height: auto;
+  padding-bottom: 5vh;
+  background-color: black;
+  border-radius: 1em;
+}
+.pic {
+  width: 100vw;
+  height: auto;
+}
+.navlogo {
+  width: 8vw;
+}
+.my_logo {
+  width: 8vw;
+}
+.pic_text {
+  font-size: 1.2vh;
+  text-align: center;
+  color: white;
+  width: 90%;
+  margin: 0 auto;
+}
+.bigblurb {
+  text-align: center;
+  width: 95%;
+  margin: 0  auto;
+}
+
+.center {
+  text-align: center;
+  padding-top: 5vh;
+  width: 90%;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.li {
+  text-align: left;
+  width: 90%;
+}
+
+.ri {
+  text-align: right;
+  width: -90%;
+}
+/* css for project page */
+
+.galpic {
+  width: 100%;
+}
+.galart {
+  width: 100vw;
+  height: auto;
+}
+.arttext {
+  font-size: 3vh;
+  color: white;
+  text-decoration: black;
+}
+
+.main {
+  padding: 5vh 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+.logo {
+  height: 4vh;
+  width: auto;
+}
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -10,186 +134,14 @@
   background-size: cover;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  text-align: center;
-}
-
 .footer {
+  position: relative;
+  bottom: 5vh;
   width: 100%;
-  height: 75px;
-  border-top: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.footer img {
-  margin-left: 0.5rem;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-  max-width: 1000px;
-}
-
-.description {
-  padding: 15px;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  max-width: 800px;
-  margin-top: 3rem;
-}
-
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 2em;
-}
-
-.navlogo {
-  height: 3em;
-}
-
-.techicons {
-  display: inline-block;
-  justify-content: space-between;
-
-}
-.icons {
-  width: 3em;
-  flex-wrap: wrap;
-}
-.galpic {
-  width: 860px;
-  height: 565px;
-}
-.cartext {
-  margin-top: 3rem;
-  display: flex;
-  color: black;
-  justify-content: center;
-  width: 70%;
-  text-align: center;
-  font-size: 3vh;
-  background-color: honeydew;
-  border-radius: 10px;
-}
-
-.tar {
-  position: absolute;
-  text-align: right;
-  
-}
-.bigblurb {
-  opacity: 0;
-  text-align: center;
-  margin-top: 3vh;
-  width: 80%;
-  font-size: 1.2rem;
-}
-.ri {
-  padding-top: 3vh;
-  text-align: center;
-  margin-left: 25vw;
-  width: 66%;
-}
-
-.li {
-  padding-top: 3vh;
-  text-align: center;
-  margin-right: 30px;
-  width: 66%; 
-}
-
-.gradient {
-  background-image: linear-gradient(45deg, #868686, #646464);
-}
-
-.center {
-  padding-top: 5vh;
-  text-align: center;
-  justify-content: center;
-  width: 80%;
-}
-
-.fade {
-  opacity: 0;
+  height: 4vh;
 }
 
 .fade_title {
@@ -198,75 +150,315 @@
   text-align: left;
   opacity: 0;
   margin: 0;
-  line-height: 1.15;
-  font-size: 6rem;
+  font-size: 6vh;
   color: black;
-  text-shadow: darkgrey 1px 1px 1px;
 }
 
 .fade_description {
   margin-top: 1rem;
-  max-width: 80vw;
   text-align: left;
   opacity: 0;
-  padding: 15px;
   line-height: 1.5;
-  font-size: 2rem;
+  font-size: 2vh;
   color: white;
   background-color: #2C2C2C;
   border-radius: 15px;
   font-family: 'Source Code Pro', monospace;
 }
 
-.hi {
-  padding-left: 1vw;
-  padding-top: 10vh;
-  font-size: 10vh;
-  margin-top: 5vh;
-  margin-bottom: 0px;
-}
-
-.med_text {
-  padding-left: 1vw;
-  font-size: 10vh;
-  margin: 0 auto;
-}
-
-.big_text {
-  padding-left: 1vw;
-  font-size: 25vh;
-}
-
-.page_top {
-  background-color: black;
-  color: white;
-  padding-bottom: 5vh;
-}
-
-.my_pic {
-  height: auto;
-  max-width: 100%;
+.cartext {
+  margin-top: 3vh;
   display: flex;
+  color: black;
   justify-content: center;
-  background-color: black;
-  padding-top: 5vh;
-  padding-bottom: 10vh;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-
-.pic_text {
+  width: 90%;
   text-align: center;
-  font-size: 3vh;
+  font-size: 2vh;
+  background-color: honeydew;
+  border-radius: 10px
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
+@media (min-width: 600px) {
+  .container {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background-image: url("/bgblue1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+  
   .main {
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    text-align: center;
+  }
+  
+  .footer {
+    width: 100%;
+    height: 75px;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer img {
+    margin-left: 0.5rem;
+  }
+  
+  .footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title a {
+    color: #0070f3;
+    text-decoration: none;
+  }
+  
+  .title a:hover,
+  .title a:focus,
+  .title a:active {
+    text-decoration: underline;
+  }
+  
+  .title {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 4rem;
+  }
+  
+  .title,
+  .description {
+    text-align: center;
+    max-width: 1000px;
+  }
+  
+  .description {
+    padding: 15px;
+    line-height: 1.5;
+    font-size: 1.5rem;
+  }
+  
+  .code {
+    background: #fafafa;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+      Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+  
+  .grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+    max-width: 800px;
+    margin-top: 3rem;
+  }
+  
+  .card {
+    margin: 1rem;
+    flex-basis: 45%;
+    padding: 1.5rem;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  
+  .card:hover,
+  .card:focus,
+  .card:active {
+    color: #0070f3;
+    border-color: #0070f3;
+  }
+  
+  .card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+  }
+  
+  .card p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  
+  .logo {
+    height: 2em;
+  }
+  
+  .my_logo{
+    width: 4em;
+    padding-top: 10%;
+  }
+
+  .navlogo {
+    width: 3em;
+    height: auto;
+    align-items: center;
+  }
+  
+  .techicons {
+    display: inline-block;
+    justify-content: space-between;
+  
+  }
+  .icons {
+    width: 3em;
+    flex-wrap: wrap;
+  }
+
+  .galart {
+    width: auto;
+    height: 70vh;
+  }
+
+  .galpic {
+    width: 80vw;
+    height: auto;
+  }
+  .cartext {
+    margin-top: 3rem;
+    display: flex;
+    color: black;
+    justify-content: center;
+    width: 70%;
+    text-align: center;
+    font-size: 3vh;
+    background-color: honeydew;
+    border-radius: 10px;
+  }
+  
+  .tar {
+    position: absolute;
+    text-align: right;
+    
+  }
+  .bigblurb {
+    opacity: 0;
+    text-align: center;
+    margin-top: 3vh;
+    width: 80%;
+    font-size: 1.2rem;
+  }
+  .ri {
+    padding-top: 3vh;
+    text-align: center;
+    margin-left: 25vw;
+    width: 66%;
+  }
+  
+  .li {
+    padding-top: 3vh;
+    text-align: center;
+    margin-right: 30px;
+    width: 66%; 
+  }
+  
+  .gradient {
+    background-image: linear-gradient(45deg, #868686, #646464);
+  }
+  
+  .center {
+    padding-top: 5vh;
+    text-align: center;
+    justify-content: center;
+    width: 80%;
+  }
+  
+  .fade {
+    opacity: 0;
+  }
+  
+  .fade_title {
+    position: relative;
+    max-width: 100%;
+    text-align: left;
+    opacity: 0;
+    margin: 0;
+    line-height: 1.15;
+    font-size: 6rem;
+    color: black;
+    text-shadow: darkgrey 1px 1px 1px;
+  }
+  
+  .fade_description {
+    margin-top: 1rem;
+    max-width: 80vw;
+    text-align: left;
+    opacity: 0;
+    padding: 15px;
+    line-height: 1.5;
+    font-size: 2rem;
+    color: white;
+    background-color: #2C2C2C;
+    border-radius: 15px;
+    font-family: 'Source Code Pro', monospace;
+  }
+  
+  .hi {
+    padding-left: 1vw;
+    padding-top: 5vh;
+    font-size: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 0px;
+  }
+  
+  .med_text {
+    padding-left: 1vw;
+    font-size: 10vh;
+    margin: 0 auto;
+  }
+  
+  .big_text {
+    padding-left: 1vw;
+    font-size: 25vh;
+  }
+  
+  .page_top {
+    background-color: black;
+    color: white;
+    padding-bottom: 5vh;
+  }
+  
+  .my_pic {
+    height: auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  
+  .pic_text {
+    text-align: center;
+    font-size: 3vh;
+  }
+
+  .arttext {
+    background: hidden;
+    margin: 0 auto;
+    overflow-x: hidden;
   }
 }
