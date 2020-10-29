@@ -40,44 +40,44 @@ function ControlledCarousel() {
       <Carousel activeIndex={index} onSelect={handleSelect} indicators={false} controls={false} pause={'hover'} interval={4000}>
         <Carousel.Item className={styles.galpic}>
           <img
-            className="d-block w-80"
+            className={styles.galart}
             src="/gameplay.png"
             alt="Slide one showing my side-scrolling platformer"
           />
           <Carousel.Caption>
             <div>
-              <h2 className={styles.carcap}><a href="https://charleshperry.github.io/P1-Side-Scroller/">My First Game</a></h2>
+              <h2 className={styles.arttext}><a href="https://charleshperry.github.io/P1-Side-Scroller/">My First Game</a></h2>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className={styles.galpic}>
           <img
-            className="d-block w-80"
+            className={styles.galart}
             src="/screenshot2.png"
             alt="Studio Ghibli Forums login page"
           />
           <Carousel.Caption>
-            <h2><a href="https://ghiblifilmp2.herokuapp.com/">Studio Ghibli Forums</a></h2>
+            <h2 className={styles.arttext}><a href="https://ghiblifilmp2.herokuapp.com/">Studio Ghibli Forums</a></h2>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item >
           <img
-          className="d-block w-80"
+          className={styles.galart}
           src="/Reading.png"
           alt="Home page of reading buddy"
           />
           <Carousel.Caption>
-            <h2><a href="https://mystifying-johnson-1a5de9.netlify.app/">Reading Buddy</a></h2>
+            <h2 className={styles.arttext}><a href="https://mystifying-johnson-1a5de9.netlify.app/">Reading Buddy</a></h2>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item >
           <img
-            className="d-block w-80"
+            className={styles.galart}
             src="/Sandbox.png"
             alt="Gameplay of my VR Sandbox game"
           />
           <Carousel.Caption>
-            <h2><a href="https://github.com/CharlesHPerry/VR-Sandbox-Playground">VR Sandbox Playground</a></h2>
+            <h2 className={styles.arttext}><a href="https://github.com/CharlesHPerry/VR-Sandbox-Playground">VR Sandbox Playground</a></h2>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
@@ -97,13 +97,13 @@ export default function Home() {
     TweenMax.to(
     introName,
     1, {
-      y: +20,
+      y: +scroll_value,
       opacity: 1,
     })
     TweenMax.to(
       introText,
       1, {
-        y: +20,
+        y: +scroll_value,
         opacity: 1,
         delay: .4,
       }
@@ -116,10 +116,12 @@ export default function Home() {
     threshold: 0.9,
   });
 
+  const scroll_value = "4vh"
+
   const fadeIn = (element) => {
     gsap.to(sectionRef.current, 1, {
       opacity: 1,
-      y: 20,
+      y: scroll_value,
       ease: 'power4.out',
       stagger: {
         amount: .3,
@@ -130,7 +132,7 @@ export default function Home() {
   const fadeOut = (element) => {
     gsap.to(sectionRef.current, 1, {
       opacity: 0,
-      y: -20,
+      y: -scroll_value,
       ease: 'power4.out',
       stagger: {
         amount: .3,
