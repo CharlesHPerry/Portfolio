@@ -4,14 +4,13 @@ import NavBar from '../components/navbar';
 import Particles from "react-tsparticles";
 import { useState, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
-import { gsap, TweenMax, Power3} from 'gsap/index';
 import { useIntersection } from 'react-use';
 import emailjs from 'emailjs-com'
 
 
 let projectsText = [
   "Other than a Tic Tac Toe game, this was my first attempt at making a game using Javascript, CSS and HTML. Deployed and playable, but currently a work in progress. This game is meant to be a challenging platformer that puts emphasis on the player having good timing and knowledge of game mechanics.",
-  "The Studio Ghibli Forums is the place for lovers of Studio Ghibli films to select their favorites and share their opinions by creating discussion posts. Currently deployed, but a work in progress.",
+  "The Studio Ghibli Forums is the place for lovers of Studio Ghibli films to select their favorites and share their opinions by creating discussion posts. Currently fully functional, more is yet to be added.",
   "Reading Buddy is a colabrative project from myself, Emily Krauss, Scott McLeod, and Eliott Davidson, who are all very wonderful people. Reading Buddy is a virtual book catalog where a user can keep track of the books they have read, currently are reading, and help them find new books to read based on what their friends reccomend. Reading Buddy is intended to be a freindly place for discourse and literary exploration.",
   "VR Sandbox Playground is exactly what it's name entails, currently the player can move around the game space and pickup objects and spawn in new ones with the menu above the red platform. Built in Unity using XR intergration which allows for the use of muliple different devices. As I have time more features will be added, including a grapple gun and obstacle course."
 ]
@@ -41,14 +40,12 @@ export default function Home() {
       <body className={styles.body}>
         <NavBar/>
         <main className={styles.main_page}>
-          <section id="top" >
-            <h1 className={styles.can_txt}>Hi, I'm Charles</h1>
-            <Particles options={{
-            background: {
-              color: {
-                value: "#0d47a1",
-              },
-            },
+          <section id="top" className={styles.canvas}>
+            <div className={styles.intro_div}>
+            <h1 className={styles.can_txt}>Charles Perry</h1>
+            <p className={styles.btm_txt}>An early career full-stack web developer. Deeply motivated and relentlessly devoted to learning and improving in the hopes of helping others.</p>
+            </div>
+            <Particles id={styles.particle} options={{
             fpsLimit: 60,
             interactivity: {
               detectsOn: "canvas",
@@ -118,7 +115,7 @@ export default function Home() {
           </section>
           <section id="about">
             <div className={styles.title_div}>
-              <h1>About</h1>
+              <h1 className={styles.section_title}>About</h1>
             </div>
             <div className={styles.about_div}>
               <div className={styles.text_box}>
@@ -130,7 +127,7 @@ export default function Home() {
           </section>
           <section id="skills">
             <div className={styles.title_div}>
-              <h1>Skills</h1>
+              <h1 className={styles.section_title}>Skills</h1>
             </div>
             <div className={styles.skills_div}>
               <div className={styles.skills_box}>
@@ -205,36 +202,36 @@ export default function Home() {
           </section>
           <section id="projects">
             <div className={styles.title_div}>
-              <h1>Projects</h1>
+              <h1 className={styles.section_title}>Projects</h1>
             </div>
             <div className={styles.project_div}>
               <div className={styles.project}>
                 <img src={'/gameplay.png'} alt={"Gameplay screenshot"} className={styles.project_image} />
-                <h4>P1 Platformer</h4>
+                <h4 className={styles.p_title}>P1 Platformer</h4>
                 <p className={styles.project_text}>{projectsText[0]}</p>
               </div>
               <div className={styles.project}>
                 <img src={"/P2image.png"} alt={"screenshot of Studio Ghibli forums"} className={styles.project_image} />
-                <h4>Studio Ghibli Forums</h4>
+                <h4 className={styles.p_title}>Studio Ghibli Forums</h4>
                 <p className={styles.project_text}>{projectsText[1]}</p>
               </div>
               <div className={styles.project}>
                 <img src={'/Reading.png'} alt={"Reading Buddy"} className={styles.project_image} />
-                <h4>Reading Buddy</h4>
+                <h4 className={styles.p_title}>Reading Buddy</h4>
                 <p className={styles.project_text}>{projectsText[2]}</p>
               </div>
               <div className={styles.project}>
                 <img src={"/Sandbox.png"} alt={"VR Sandbox screenshot"} className={styles.project_image} />
-                <h4>VR Sandbox</h4>
+                <h4 className={styles.p_title}>VR Sandbox</h4>
                 <p className={styles.project_text}>{projectsText[3]}</p>
               </div>
             </div>
           </section>
           <section id="contact">
             <div className={styles.title_div}>
-              <h1>Contact</h1>
+              <h1 className={styles.section_title}>Contact</h1>
             </div>
-            <div className={styles.about_div}>
+            <div className={styles.contact_div}>
               <form onSubmit={sendEmail} className={styles.form_div}>
                 <div className={styles.input_div}>
                   <input className={styles.input} name="name" placeholder="Name"></input>

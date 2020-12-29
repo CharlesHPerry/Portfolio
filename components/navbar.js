@@ -31,7 +31,7 @@ export default function Navbar() {
                                 {val.Icon}
                             </div>
                             <div className={styles.navtitle}>
-                                <a href={val.link} target="_blank">{val.title}</a>
+                                <a href={val.link} target="_blank" className={styles.link_txt}>{val.title}</a>
                             </div>
                         </li>
                     )
@@ -41,7 +41,7 @@ export default function Navbar() {
                         <ListAltIcon/>
                     </div>
                     <div className={styles.navtitle}>
-                        <a href="/resume.pdf" target="_blank">My Resume</a>
+                        <a href="/resume.pdf" target="_blank" className={styles.link_txt}>My Resume</a>
                     </div>
                 </li>
             </ul>
