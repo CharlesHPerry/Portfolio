@@ -41,9 +41,8 @@ export default function Home() {
         <NavBar/>
         <main className={styles.main_page}>
           <section id="top" className={styles.canvas}>
-            <div className={styles.intro_div}>
-            <h1 className={styles.can_txt}>Charles Perry</h1>
-            <p className={styles.btm_txt}>An early career full-stack web developer. Deeply motivated and relentlessly devoted to learning and improving in the hopes of helping others.</p>
+            <div>
+              <p className={styles.btm_txt}>An early career full-stack web developer. Deeply motivated and relentlessly devoted to learning and improving in the hopes of helping others.</p>
             </div>
             <Particles id={styles.particle} options={{
             fpsLimit: 60,
