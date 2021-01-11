@@ -119,7 +119,7 @@ export default function Home() {
             <div className={styles.about_div}>
               <div className={styles.text_box}>
                 <p className={styles.first_text}>Young, driven, and motivated developer passionate about functionality.</p>
-                <p className={styles.main_text}>I am someone who has always been enamored with understanding how things function. Thoughout my time in school math and science classes were always a favorite, they gave me the tools to better understand mechanisms and systems present in the world. Without any exposure to software development in school I assumed I would continue my study of the sciences and of mathmatics in college. However, after graduating high school in the spring of 2019, I was finally exposed to what it meant to be a developer and was captivated by the idea that I could create my own systems and mechanisms through programming languages.</p>
+                <p className={styles.main_text}>I am someone who has always been enamored with understanding how things function. Throughout my time in school math and science classes were always favorites, they gave me the tools to better understand mechanisms and systems present in the world. Without any exposure to software development in school, I assumed I would continue my study of the sciences and mathematics in college. However, after graduating high school in the spring of 2019, I was finally exposed to what it meant to be a developer and was captivated by the idea that I could create systems and mechanisms through programming languages.</p>
                 <p className={styles.last_text}>Now as a developer I am motivated by my want to help others to accomplish their goals.</p>
               </div>
             </div>
