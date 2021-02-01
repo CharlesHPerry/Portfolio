@@ -11,8 +11,11 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border: black solid 1px;
-  border-radius: 2px;
+}
+
+.intro_span {
+  background: rgba(255, 255, 255, 0.79);
+  line-height: 2vh;
 }
 
 .hidden {
@@ -37,7 +40,7 @@
 }
 
 .icons {
-  width: 10vw;
+  width: 14vw;
 }
 
 /* TEST CSS */
@@ -82,7 +85,7 @@
 }
 
 .icons {
-  width: 7vw;
+  width: 12vw;
   flex-wrap: wrap;
 }
 
@@ -167,7 +170,7 @@
 
 .svg_div {
   text-align: center;
-  font-size: 4vh;
+  font-size: 2vh;
   padding-bottom: 1.5vh;
   padding-top: 1.5vh
 }
@@ -186,12 +189,14 @@
 }
 
 .skills_div {
-  height: 100vh;
+  height: auto;
   width: 100%;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(201, 195, 195);
+  background: linear-gradient(180deg, #a3bded, #6991c7);
   box-shadow: inset 0 2px 5px 0 rgba(0,0,0,0.5), 0 2px 10px 0 rgba(0,0,0,0.5);
 }
 
@@ -207,10 +212,11 @@
 .btm_txt {
   position: absolute;
   margin: 0 auto;
-  padding-top: 24vh;
-  padding-left: 7vw;
-  font-size: 6vh;
-  color:  #2f4050;
+  padding-top: 2vh;
+  padding-left: 4vw;
+  font-size: 2vh;
+  line-height: 3vh;
+  color:  #252a2e;
   z-index: 1;
 }
 
@@ -230,7 +236,7 @@
   align-content: space-evenly;
   display: grid;
   grid-template-columns: 80%;
-  background-color: rgb(201, 195, 195);
+  background: linear-gradient(180deg, #a3bded, #6991c7);
   box-shadow: inset 0 2px 5px 0 rgba(0,0,0,0.5), 0 2px 10px 0 rgba(0,0,0,0.5);
 }
 
@@ -261,7 +267,7 @@
   height: auto;
   justify-content: center;
   align-items: center;
-  background-color: rgb(201, 195, 195);
+  background: linear-gradient(180deg, #a3bded, #6991c7);
   box-shadow: inset 0 2px 5px 0 rgba(0,0,0,0.5), 0 2px 10px 0 rgba(0,0,0,0.5);
 }
 
@@ -306,7 +312,7 @@
 }
 
 .form_div {
-  background-color: rgb(201, 195, 195);
+  background: none;
   width: 85%;
   height: 85%;
   justify-content: center;
@@ -323,20 +329,24 @@
   background-color: #2f5678;
   color: white;
   height: 5vh;
-  width: 12vw;
+  width: 35vw;
   border-radius: 5px;
 }
 
 .canvas {
-  height: 90vh;
+  padding-top: 10vh;
+  height: auto;
   width: 100%;
 }
 
 #particle {
-  height: 100%;
+  height: auto;
   width: 100%;
   margin: 0 auto;
-  background: linear-gradient(180deg, #a3bded, #6991c7)
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  display: flex;
 }
 
 .intro_div {
@@ -351,7 +361,7 @@
   height: 105%;
   justify-content: center;
   align-items: center;
-  background-color: rgb(201, 195, 195);
+  background: linear-gradient(180deg, #a3bded, #6991c7);
   overflow-y: hidden;
   box-shadow: inset 0 2px 5px 0 rgba(0,0,0,0.5), 0 2px 10px 0 rgba(0,0,0,0.5);
 }
@@ -360,9 +370,23 @@
   padding-bottom: 2vh;
 }
 
-
+@media (min-width: 650px){
+  .btm_txt{
+    font-size: 3vh;
+    line-height: 4vh;
+    padding-top: 4vh;
+  }
+}
 
 @media (min-width: 1000px) {
+  .icons{
+    width: 7vw;
+  }
+
+  .canvas{
+    padding-top: 0vh;
+  }
+
   .nav_bar {
     background-color: #2f4050;
     height: 20vh; 
@@ -410,6 +434,25 @@
     display: flex;
     align-content: center;
     left: 0;
+  }
+
+  .btm_txt {
+    position: absolute;
+    margin: 0 auto;
+    padding-top: 5vh;
+    padding-left: 7vw;
+    font-size: 5vh;
+    line-height: 7vh;
+    color: #252a2e;
+    z-index: 1;
+  }
+
+  .submit {
+    background-color: #2f5678;
+    color: white;
+    height: 5vh;
+    width: 12vw;
+    border-radius: 5px;
   }
 
 }
