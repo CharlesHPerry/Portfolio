@@ -42,75 +42,10 @@ export default function Home() {
         <main className={styles.main_page}>
           <section id="top" className={styles.canvas}>
             <div>
-              <p className={styles.btm_txt}>An early career full-stack web developer. Deeply motivated and relentlessly devoted to learning and improving in the hopes of helping others.</p>
+              <p className={styles.btm_txt}><span className={styles.intro_span}>An early career full-stack web developer. Aiming to help others through their work.</span></p>
             </div>
-            <Particles id={styles.particle} options={{
-            fpsLimit: 60,
-            interactivity: {
-              detectsOn: "canvas",
-              events: {
-                onClick: {
-                  enable: true,
-                  mode: "push",
-                },
-                onHover: {
-                  enable: true,
-                  mode: "repulse",
-                },
-                resize: true,
-              },
-              modes: {
-                push: {
-                  quantity: 4,
-                },
-                repulse: {
-                  distance: 75,
-                  duration: 0.4,
-                },
-              },
-            },
-            particles: {
-              color: {
-                value: "#ffffff",
-              },
-              links: {
-                color: "#ffffff",
-                distance: 150,
-                enable: true,
-                opacity: 0.5,
-                width: 1,
-              },
-              collisions: {
-                enable: true,
-              },
-              move: {
-                direction: "none",
-                enable: true,
-                outMode: "bounce",
-                random: false,
-                speed: 2,
-                straight: false,
-              },
-              number: {
-                density: {
-                  enable: true,
-                  value_area: 800,
-                },
-                value: 100,
-              },
-              opacity: {
-                value: 0.5,
-              },
-              shape: {
-                type: "circle",
-              },
-              size: {
-                random: true,
-                value: 5,
-              },
-            },
-            detectRetina: true,
-          }}/>
+            <img src={'/PicofMe.jpg'} id={styles.particle}
+            />
           </section>
           <section id="about">
             <div className={styles.title_div}>
