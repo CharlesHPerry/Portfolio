@@ -251,12 +251,15 @@
 
 .project_text {
   width: 90%;
-  height: auto;
   padding-left: 1vw;
 }
 
 .p_title {
   padding-left: 0.5vw;
+  color: black;
+  font-size: 4vh;
+  padding-bottom: 2vh;
+  text-decoration: black underline;
 }
 
 .about_div {
@@ -289,14 +292,21 @@
 
 .main_text {
   size: 3vh;
-  width: 95%;
+  width: 90%;
   margin: auto;
-  justify-content: center;
+  text-align: left;
+  padding-top: 2vh;
+  text-indent: 5%;
 }
 
 .last_text {
   size: 3vh;
-  width: 95%;
+  width: 90%;
+  text-align: left;
+  margin: auto;
+  padding-top: 2vh;
+  text-indent: 5%;
+  padding-bottom: 2vh;
 }
 
 .input_div {

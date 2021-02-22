@@ -10,8 +10,8 @@ import emailjs from 'emailjs-com'
 
 let projectsText = [
   "Other than a Tic Tac Toe game, this was my first attempt at making a game using Javascript, CSS and HTML. Deployed and playable, but currently a work in progress. This game is meant to be a challenging platformer that puts emphasis on the player having good timing and knowledge of game mechanics.",
-  "The Studio Ghibli Forums is the place for lovers of Studio Ghibli films to select their favorites and share their opinions by creating discussion posts. Currently fully functional, more is yet to be added.",
-  "Reading Buddy is a colabrative project from myself, Emily Krauss, Scott McLeod, and Eliott Davidson, who are all very wonderful people. Reading Buddy is a virtual book catalog where a user can keep track of the books they have read, currently are reading, and help them find new books to read based on what their friends reccomend. Reading Buddy is intended to be a freindly place for discourse and literary exploration.",
+  "The Studio Ghibli Forums is the place for lovers of Studio Ghibli films to select their favorites and share their opinions by creating discussion posts. Front-end built with HTML, CSS, and ejs. The backend utilzes Express.js, Sequel and the Studio Ghibli API.",
+  "Reading Buddy is a colabrative project by Emily Krauss, Scott McLeod, Eliott Davidson, and myself. Reading Buddy is a virtual book catalog where a user can keep track of the books they have read, currently are reading, and help them find new books to read based on what their friends reccomend. Reading Buddy is intended to be a freindly place for discourse and literary exploration. Reading Buddy was built  using MongoDB, Express.js, React, and Node.js",
   "VR Sandbox Playground is exactly what it's name entails, currently the player can move around the game space and pickup objects and spawn in new ones with the menu above the red platform. Built in Unity using XR intergration which allows for the use of muliple different devices. As I have time more features will be added, including a grapple gun and obstacle course."
 ]
 
@@ -53,9 +53,9 @@ export default function Home() {
             </div>
             <div className={styles.about_div}>
               <div className={styles.text_box}>
-                <p className={styles.first_text}>Young, driven, and motivated developer passionate about functionality.</p>
-                <p className={styles.main_text}>I am someone who has always been enamored with understanding how things function. Throughout my time in school math and science classes were always favorites, they gave me the tools to better understand mechanisms and systems present in the world. Without any exposure to software development in school, I assumed I would continue my study of the sciences and mathematics in college. However, after graduating high school in the spring of 2019, I was finally exposed to what it meant to be a developer and was captivated by the idea that I could create systems and mechanisms through programming languages.</p>
-                <p className={styles.last_text}>Now as a developer I am motivated by my want to help others to accomplish their goals.</p>
+                <p className={styles.first_text}>With a passion for functionality, I approach every challenge as an opportunity to learn and improve.</p>
+                <p className={styles.main_text}>    I am someone who has always been enamored with understanding how things function. Throughout my time in school math and science classes were always favorites because they gave me the tools to better understand the mechanisms and systems present in our world. Growing up in the age of the internet I was always curious how the games I played and websites I visited worked and even put learning to code on a bucket list I was asked to make in the sixth grade. As my education continued I was never exposed to how this fundamental aspect of my life worked. So I took it upon myself to better understand what software development was and began to teach myself Python. I immediately fell in love with the idea that I could write scripts to do whatever I pleased and knew instantly it was going to be my career.</p>
+                <p className={styles.last_text}>In order to fast-track my entry into the field, I enrolled in General Assembly’s Software engineering immersive course where for the next three months I spent seventy hours a week receiving hands-on training from industry professionals and working on projects with like-minded individuals. Having graduated from the course I have continued my learning while volunteering my skillset to local non-profits. While I haven’t decided what sector I want to work in, I know that I want my work to directly benefit people in their day-to-day lives.</p>
               </div>
             </div>
           </section>
@@ -141,17 +141,17 @@ export default function Home() {
             <div className={styles.project_div}>
               <div className={styles.project}>
                 <img src={'/gameplay.png'} alt={"Gameplay screenshot"} className={styles.project_image} />
-                <h4 className={styles.p_title}>P1 Platformer</h4>
+                <a href="https://charleshperry.github.io/P1-Side-Scroller/" target="_blank" className={styles.p_title}>P1 Platformer</a>
                 <p className={styles.project_text}>{projectsText[0]}</p>
               </div>
               <div className={styles.project}>
                 <img src={"/P2image.png"} alt={"screenshot of Studio Ghibli forums"} className={styles.project_image} />
-                <h4 className={styles.p_title}>Studio Ghibli Forums</h4>
+                <a href="https://ghiblifilmp2.herokuapp.com/" target="_blank" className={styles.p_title}>Studio Ghibli Forums</a>
                 <p className={styles.project_text}>{projectsText[1]}</p>
               </div>
               <div className={styles.project}>
                 <img src={'/Reading.png'} alt={"Reading Buddy"} className={styles.project_image} />
-                <h4 className={styles.p_title}>Reading Buddy</h4>
+                <a href="https://mystifying-johnson-1a5de9.netlify.app/" target="_blank" className={styles.p_title}>Reading Buddy</a>
                 <p className={styles.project_text}>{projectsText[2]}</p>
               </div>
               <div className={styles.project}>
