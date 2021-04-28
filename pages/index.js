@@ -11,7 +11,7 @@ import emailjs from 'emailjs-com'
 let projectsText = [
   "Other than a Tic Tac Toe game, this was my first attempt at making a game using Javascript, CSS and HTML. Deployed and playable, but currently a work in progress. This game is meant to be a challenging platformer that puts emphasis on the player having good timing and knowledge of game mechanics.",
   "The Studio Ghibli Forums is the place for lovers of Studio Ghibli films to select their favorites and share their opinions by creating discussion posts. Front-end built with HTML, CSS, and ejs. The backend utilzes Express.js, Sequel and the Studio Ghibli API.",
-  "Reading Buddy is a colabrative project by Emily Krauss, Scott McLeod, Eliott Davidson, and myself. Reading Buddy is a virtual book catalog where a user can keep track of the books they have read, currently are reading, and help them find new books to read based on what their friends reccomend. Reading Buddy is intended to be a freindly place for discourse and literary exploration. Reading Buddy was built  using MongoDB, Express.js, React, and Node.js",
+  "Reading Buddy is a colabrative project by Emily Krauss, Scott McLeod, Eliott Davidson, and myself. Reading Buddy is a virtual book catalog where a user can keep track of the books they have read, currently are reading, and help them find new books to read based on what their friends reccomend. Reading Buddy was built  using MongoDB, Express.js, React, and Node.js",
   "VR Sandbox Playground is exactly what it's name entails, currently the player can move around the game space and pickup objects and spawn in new ones with the menu above the red platform. Built in Unity using XR intergration which allows for the use of muliple different devices. As I have time more features will be added, including a grapple gun and obstacle course."
 ]
 
@@ -191,7 +191,7 @@ export default function Home() {
                       <p>mongoDB</p>
                     </div>
                     <div className={styles.skill_card_back}>
-                      <p className={styles.card_txt}>MongoDB is the second database language I used that I grew to apprieciate as I learned it's use cases over SQL </p>
+                      <p className={styles.card_txt}>While MongoDB is not my favorite database language I apprieciate it's use cases over SQL </p>
                     </div>
                   </div>
                 </div>
@@ -204,7 +204,7 @@ export default function Home() {
                       <p>MySQL</p>
                     </div>
                     <div className={styles.skill_card_back}>
-                      <p className={styles.card_txt}>While MySQL is not my prefered relational database managment system I am comfortable working with it</p>
+                      <p className={styles.card_txt}>MySQL is not my prefered database managment system I am comfortable working with it</p>
                     </div>
                   </div>
                 </div>
