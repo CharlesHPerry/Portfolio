@@ -34,7 +34,7 @@
   color: white;
   display: flex-end;
   width: 3vw;
-  padding-left: 11vw;
+  padding-left: 70%;
   padding-top: 3vh;
   cursor: pointer;
 }
@@ -87,8 +87,8 @@
 
 
 .sidebar {
-  height: 90vh;
-  width: 17vw;
+  height: 100%;
+  width: 33vw;
   top: 0;
   position: fixed;
   background-color: #2f4050;
